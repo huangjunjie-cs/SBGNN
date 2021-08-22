@@ -57,7 +57,7 @@ Please cite our paper if you use this code in your own work
 ```
 @inproceedings{huang2021signed,
   title={Signed Bipartite Graph Neural Networks},
-  author={Huang, Junjie and Shen, Huawei and Qi, Cao, and ShuChang Tao, and Cheng, Xueqi},
+  author={Huang, Junjie and Shen, Huawei and Cao, Qi and Tao, ShuChang and Cheng, Xueqi},
   booktitle={Proceedings of the 30th ACM International Conference on Information and Knowledge Management},
   year={2021}
 }
