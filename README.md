@@ -32,7 +32,7 @@ between two sets.
 ## Dataset
 
 For `bonanza, house, senate`, you can download it from this [repository](https://github.com/tylersnetwork/signed_bipartite_networks).
-For `review` dataset, you can download [it](./experiments-data/review.txt) in ```experiments-data``` folder.
+For `review` dataset, you can download [it](./experiments-data/review-cikm2021.txt) in ```experiments-data``` folder.
 
 ## Dependency
 In order to run this code, you need to install following dependencies:
