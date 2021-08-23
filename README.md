@@ -1,5 +1,10 @@
 # Signed Bipartite Graph Neural Networks
 
+## This is our PyTorch implementation code for our paper:
+> Signed Bipartite Graph Neural Networks
+> [arXiv]()
+
+
 ## Introduction
 
 <div style="margin: 20px;">
@@ -33,6 +38,7 @@ between two sets.
 
 For `bonanza, house, senate`, you can download it from this [repository](https://github.com/tylersnetwork/signed_bipartite_networks).
 For `review` dataset, you can download [it](./experiments-data/review-cikm2021.txt) in ```experiments-data``` folder.
+
 
 ## Dependency
 In order to run this code, you need to install following dependencies:
