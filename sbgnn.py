@@ -175,19 +175,14 @@ class SBGNNLayer(nn.Module):
         self.agg_b_from_b_pos = aggregator(emb_size_b, emb_size_b)
         self.agg_b_from_b_neg = aggregator(emb_size_b, emb_size_b)
 
-        self.update_a = nn.Sequential(
+        self.update_func = nn.Sequential(
             nn.Dropout(args.dropout),
             nn.Linear(emb_size_a * 5, emb_size_a * 2),
             nn.PReLU(),
             nn.Linear(emb_size_b * 2, emb_size_b)
             
         )
-        self.update_b = nn.Sequential(
-            nn.Dropout(args.dropout),
-            nn.Linear(emb_size_b * 5, emb_size_b * 2),
-            nn.PReLU(),
-            nn.Linear(emb_size_b * 2, emb_size_b)
-        )
+       
 
 
     def forward(self, feature_a, feature_b):
@@ -202,7 +197,7 @@ class SBGNNLayer(nn.Module):
         m_a_from_a_neg = self.agg_a_from_a_neg(self.edgelist_a_a_neg, feature_a, feature_a, node_num_a, node_num_a)
         
         new_feature_a = torch.cat([feature_a, m_a_from_b_pos, m_a_from_b_neg, m_a_from_a_pos, m_a_from_a_neg], dim=1)
-        new_feature_a = self.update_a(new_feature_a)
+        new_feature_a = self.update_func(new_feature_a)
 
         m_b_from_a_pos = self.agg_b_from_a_pos(self.edgelist_b_a_pos, feature_b, feature_a, node_num_b, node_num_a)
         m_b_from_a_neg = self.agg_b_from_a_neg(self.edgelist_b_a_pos, feature_b, feature_a, node_num_b, node_num_a)
@@ -210,7 +205,7 @@ class SBGNNLayer(nn.Module):
         m_b_from_b_neg = self.agg_b_from_b_neg(self.edgelist_b_b_neg, feature_b, feature_b, node_num_b, node_num_b)
 
         new_feature_b = torch.cat([feature_b, m_b_from_a_pos, m_b_from_a_neg, m_b_from_b_pos, m_b_from_b_neg], dim=1)
-        new_feature_b = self.update_a(new_feature_b)
+        new_feature_b = self.update_func(new_feature_b)
 
         return new_feature_a, new_feature_b
 
