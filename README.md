@@ -63,9 +63,16 @@ Please cite our paper if you use this code in your own work
 
 ```
 @inproceedings{huang2021signed,
-  title={Signed Bipartite Graph Neural Networks},
-  author={Huang, Junjie and Shen, Huawei and Cao, Qi and Tao, ShuChang and Cheng, Xueqi},
-  booktitle={Proceedings of the 30th ACM International Conference on Information and Knowledge Management},
-  year={2021}
+  title     = {Signed Bipartite Graph Neural Networks},
+  author    = {Huang, Junjie and Shen, Huawei and Cao, Qi and Tao, ShuChang and Cheng, Xueqi},
+  booktitle = {{CIKM} '21: The 30th {ACM} International Conference on Information
+               and Knowledge Management, Virtual Event, Queensland, Australia, November
+               1 - 5, 2021},  
+  year      = {2021},
+  pages     = {740--749},
+  publisher = {{ACM}},
+  year      = {2021},
+  url       = {https://doi.org/10.1145/3459637.3482392},
+  doi       = {10.1145/3459637.3482392},
 }
 ```
