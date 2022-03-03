@@ -45,7 +45,7 @@ For `review` dataset, you can download [it](./experiments-data/review-cikm2021.t
 In order to run this code, you need to install following dependencies:
 
 ```
-pip install torch numpy sklearn tqdm
+pip install torch numpy sklearn tqdm tensorboard
 ```
 
 
