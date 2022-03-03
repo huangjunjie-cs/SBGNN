@@ -200,7 +200,7 @@ class SBGNNLayer(nn.Module):
         new_feature_a = self.update_func(new_feature_a)
 
         m_b_from_a_pos = self.agg_b_from_a_pos(self.edgelist_b_a_pos, feature_b, feature_a, node_num_b, node_num_a)
-        m_b_from_a_neg = self.agg_b_from_a_neg(self.edgelist_b_a_pos, feature_b, feature_a, node_num_b, node_num_a)
+        m_b_from_a_neg = self.agg_b_from_a_neg(self.edgelist_b_a_neg, feature_b, feature_a, node_num_b, node_num_a)
         m_b_from_b_pos = self.agg_b_from_b_pos(self.edgelist_b_b_pos, feature_b, feature_b, node_num_b, node_num_b)
         m_b_from_b_neg = self.agg_b_from_b_neg(self.edgelist_b_b_neg, feature_b, feature_b, node_num_b, node_num_b)
 
