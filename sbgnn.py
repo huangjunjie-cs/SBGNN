@@ -33,7 +33,6 @@ import logging
 # https://docs.python.org/3/howto/logging.html#logging-advanced-tutorial
 
 
-
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
 parser = argparse.ArgumentParser()
@@ -43,7 +42,7 @@ parser.add_argument('--dataset_name', type=str, default='house1to10-1')
 parser.add_argument('--a_emb_size', type=int, default=32, help='Embeding A Size')
 parser.add_argument('--b_emb_size', type=int, default=32, help='Embeding B Size')
 parser.add_argument('--weight_decay', type=float, default=1e-5, help='Weight Decay')
-parser.add_argument('--lr', type=float, default=0.0005, help='Learning Rate')
+parser.add_argument('--lr', type=float, default=0.005, help='Learning Rate')
 parser.add_argument('--seed', type=int, default=13, help='Random seed')
 parser.add_argument('--epoch', type=int, default=2000, help='Epoch')
 parser.add_argument('--gnn_layer_num', type=int, default=2, help='GNN Layer')
@@ -51,7 +50,6 @@ parser.add_argument('--batch_size', type=int, default=500, help='Batch Size')
 parser.add_argument('--dropout', type=float, default=0.5, help='Dropout')
 parser.add_argument('--agg', type=str, default='AttentionAggregator', choices=['AttentionAggregator', 'MeanAggregator'], help='Aggregator')
 args = parser.parse_args()
-
 
 
 # TODO 
