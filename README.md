@@ -60,7 +60,10 @@ python sbgnn.py --lr 5e-3 --seed 222 \
 Results:
 
 ```
-test_auc 0.8498742632577166 test_f1 0.8592910848549948 test_macro_f1 0.848896372204643 test_micro_f1 0.8496114447191806
+test_auc 0.8498742632577166 
+test_f1 0.8592910848549948 
+test_macro_f1 0.848896372204643 
+test_micro_f1 0.8496114447191806
 ```
 
 ## Citation
